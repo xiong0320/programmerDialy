@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp">
+    <android.support.v7.widget.CardView
+        android:id="@+id/app_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        app:cardBackgroundColor="#c4c6c8"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        app:cardPreventCornerOverlap="true"
+        app:layout_constraintTop_toTopOf="parent">
+        <ImageView
+            android:id="@+id/app_icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/fruit"/>
+
+    </android.support.v7.widget.CardView>
+    <TextView
+        android:id="@+id/app_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/app_info"
+        android:layout_alignLeft="@id/app_info"
+        android:text="appName1"/>
+    <TextView
+        android:id="@+id/visit_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/app_name"
+        android:layout_alignLeft="@id/app_name"
+        android:drawableLeft="@android:drawable/sym_action_call"
+        android:text="0"/>
+    <TextView
+        android:id="@+id/discuss_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/app_name"
+        android:layout_toLeftOf="@id/star_count"
+        android:drawableLeft="@android:drawable/ic_menu_share"
+        android:text="0"/>
+    <TextView
+        android:id="@+id/star_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:drawableLeft="@android:drawable/star_on"
+        android:layout_below="@id/app_name"
+        android:layout_alignRight="@id/app_info"
+        android:text="0"/>
+
+</RelativeLayout>

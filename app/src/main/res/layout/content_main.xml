@@ -4,20 +4,85 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:padding="25dp"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.bear.programmerdaily.MainActivity"
+    tools:context="com.example.bear.programmerdaily.activity.MainActivity"
     tools:showIn="@layout/activity_main">
+    <TextView
+        android:id="@+id/prepare"
+        android:layout_width="206dp"
+        android:layout_height="115dp"
+        android:layout_marginEnd="32dp"
+        android:layout_marginStart="5dp"
+        android:background="@mipmap/fruit"
+        android:gravity="center"
+        android:text="课前"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/teaching"
+        app:layout_constraintHorizontal_bias="0.608"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="16dp" />
+
 
 
     <TextView
-        android:id="@+id/sample_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/teaching"
+        android:layout_width="206dp"
+        android:layout_height="115dp"
+        android:layout_marginEnd="48dp"
+        android:background="@mipmap/boluo"
+        android:gravity="center"
+        android:text="上课"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="16dp" />
+
+    <TextView
+        android:id="@+id/error_note"
+        android:layout_width="142dp"
+        android:layout_height="87dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:background="@mipmap/cherry"
+        android:gravity="center"
+        android:text="错题本"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/person_profile"
+        app:layout_constraintHorizontal_bias="0.536"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="147dp" />
+
+    <TextView
+        android:id="@+id/person_profile"
+        android:layout_width="142dp"
+        android:layout_height="87dp"
+        android:layout_marginEnd="20dp"
+        android:background="@mipmap/lizhi"
+        android:gravity="center"
+        android:text="个人信息"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/after_class"
+        tools:layout_editor_absoluteY="146dp" />
+
+    <TextView
+        android:id="@+id/after_class"
+        android:layout_width="142dp"
+        android:layout_height="87dp"
+        android:layout_marginEnd="48dp"
+        android:background="@mipmap/yangmei"
+        android:gravity="center"
+        android:text="课后作业"
+        android:textColor="@android:color/white"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:layout_editor_absoluteY="146dp" />
+
+
+
 
 
 </android.support.constraint.ConstraintLayout>

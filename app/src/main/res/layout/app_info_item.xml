@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="5dp">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/app_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:layout_marginTop="48dp"
+        app:cardBackgroundColor="#c4c6c8"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="10dp"
+        app:cardPreventCornerOverlap="true"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:layout_editor_absoluteX="27dp">
+
+        <ImageView
+            android:id="@+id/app_icon"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@mipmap/fruit" />
+    </android.support.v7.widget.CardView>
+
+    <TextView
+        android:id="@+id/app_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="appName1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_info" />
+    <TextView
+        android:id="@+id/key_word"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="关键字"
+        android:layout_margin="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/app_info"
+        />
+
+    <TextView
+        android:id="@+id/visit_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:drawableLeft="@android:drawable/sym_action_call"
+        android:text="0"
+        app:layout_constraintTop_toBottomOf="@+id/app_name"
+        app:layout_constraintLeft_toLeftOf="@id/app_info"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+    <TextView
+        android:id="@+id/developer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="开发者"
+        android:layout_margin="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/app_name"
+        app:layout_constraintRight_toLeftOf="@id/star_count"
+        />
+
+    <TextView
+        android:id="@+id/star_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/app_name"
+        android:layout_margin="8dp"
+        android:drawableLeft="@android:drawable/star_on"
+        android:text="0"
+        app:layout_constraintRight_toLeftOf="@id/discuss_count"
+        app:layout_constraintTop_toBottomOf="@+id/app_name" />
+
+    <TextView
+        android:id="@+id/discuss_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:drawableLeft="@android:drawable/ic_menu_share"
+        android:text="0"
+        app:layout_constraintTop_toBottomOf="@+id/app_name"
+        app:layout_constraintRight_toRightOf="@id/app_name"
+        app:layout_constraintEnd_toEndOf="parent"
+         />
+
+
+</android.support.constraint.ConstraintLayout>
