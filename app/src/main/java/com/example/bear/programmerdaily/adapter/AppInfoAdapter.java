@@ -56,9 +56,12 @@ public class AppInfoAdapter extends RecyclerView.Adapter<AppInfoAdapter.AppInfoV
             holder.appIconIV.setImageResource(R.mipmap.cherry);
             holder.appKeywordTV.setText(current.getKeyWord());
             holder.delevoperTV.setText(current.getAppDeveloper());
-            holder.starCountTV.setText(current.getAppStar() < 0?0:current.getAppStar());
-            holder.discussCountTV.setText(current.getAppDiscussCount() < 0?0:current.getAppDiscussCount());
-            holder.visitCountTV.setText(current.getAppVisitCount() < 0?0:current.getAppVisitCount());
+            int appStar = current.getAppStar() < 0?0:current.getAppStar();
+            holder.starCountTV.setText(appStar + "");
+            int appDiscussCount = current.getAppDiscussCount() < 0?0:current.getAppDiscussCount();
+            holder.discussCountTV.setText(appDiscussCount + "");
+            int appVisitCount = current.getAppVisitCount() < 0?0:current.getAppVisitCount();
+            holder.visitCountTV.setText(appVisitCount+ "");
         } else {
             // Covers the case of data not being ready yet.
             holder.appNameTV.setText("无项目");
@@ -71,7 +74,7 @@ public class AppInfoAdapter extends RecyclerView.Adapter<AppInfoAdapter.AppInfoV
         }
     }
 
-    void setWords(List<AppInfoEntity> appInfoEntities){
+    public void setAppInfoEntitys(List<AppInfoEntity> appInfoEntities){
         mAppInfos = appInfoEntities;
         notifyDataSetChanged();
     }

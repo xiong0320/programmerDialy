@@ -15,7 +15,6 @@ public class AppInfoEntity {
     private String appImgUrl;
     private String appInfoDetail;
     private String appDeveloper;
-    @NonNull
     private int appDeveloperId;
     private int appStar;
     private int appVisitCount;

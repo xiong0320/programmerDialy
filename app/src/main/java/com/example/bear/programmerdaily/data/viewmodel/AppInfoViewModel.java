@@ -1,8 +1,10 @@
 package com.example.bear.programmerdaily.data.viewmodel;
 
+import android.app.Activity;
 import android.app.Application;
 import android.arch.lifecycle.AndroidViewModel;
 import android.arch.lifecycle.LiveData;
+import android.arch.lifecycle.ViewModel;
 import android.support.annotation.NonNull;
 
 
@@ -19,7 +21,7 @@ public class AppInfoViewModel extends AndroidViewModel {
         mRepository = new AppInfoRepository(application);
         mAllAppInfos = mRepository.getAllAppInfo();
     }
-    LiveData<List<AppInfoEntity>> getAllAppInfoss() { return mAllAppInfos; }
+    public LiveData<List<AppInfoEntity>> getAllAppInfos() { return mAllAppInfos; }
     public void insert(AppInfoEntity appInfoEntity) {
         mRepository.insert(appInfoEntity);
     }

@@ -29,18 +29,38 @@
         android:layout_alignLeft="@id/app_info"
         android:text="appName1"/>
     <TextView
+        android:id="@+id/key_word"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/app_info"
+        android:text="关键字"
+        android:layout_margin="8dp"
+        android:layout_alignEnd="@id/app_info"
+        />
+    <TextView
         android:id="@+id/visit_count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/app_name"
         android:layout_alignLeft="@id/app_name"
+        android:layout_marginLeft="12dp"
         android:drawableLeft="@android:drawable/sym_action_call"
         android:text="0"/>
+    <TextView
+        android:id="@+id/developer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="开发者"
+        android:layout_marginRight="24dp"
+        android:layout_below="@id/app_name"
+        android:layout_toLeftOf="@id/discuss_count"
+        />
     <TextView
         android:id="@+id/discuss_count"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/app_name"
+        android:layout_marginRight="24dp"
         android:layout_toLeftOf="@id/star_count"
         android:drawableLeft="@android:drawable/ic_menu_share"
         android:text="0"/>
@@ -50,6 +70,7 @@
         android:layout_height="wrap_content"
         android:drawableLeft="@android:drawable/star_on"
         android:layout_below="@id/app_name"
+        android:layout_marginRight="12dp"
         android:layout_alignRight="@id/app_info"
         android:text="0"/>
 
