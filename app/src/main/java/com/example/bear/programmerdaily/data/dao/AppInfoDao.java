@@ -14,6 +14,7 @@ public interface AppInfoDao {
     @Insert
     void insert(AppInfoEntity appInfoEntity);
 
+    
     @Query("DELETE FROM app_info_table")
     void deleteAll();
 

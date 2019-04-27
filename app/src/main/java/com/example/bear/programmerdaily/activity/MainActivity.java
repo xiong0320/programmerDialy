@@ -30,6 +30,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Stack;
+import java.util.concurrent.Executors;
 
  public class MainActivity extends AppCompatActivity {
 
@@ -43,6 +44,12 @@ import java.util.Stack;
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Executors.newCachedThreadPool().execute(new Runnable() {
+            @Override
+            public void run() {
+
+            }
+        });
         appInfoViewModel = ViewModelProviders.of(this).get(AppInfoViewModel.class);
         appInfoViewModel.getAllAppInfos().observe(this, new Observer<List<AppInfoEntity>>() {
             @Override
